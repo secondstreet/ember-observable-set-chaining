@@ -1,11 +1,11 @@
-import Observable from 'ember/mixins/observable';
+import Ember from 'ember';
 
 const superReturnThis = function() {
   this._super(...arguments);
   return this;
 };
 
-Observable.reopen({
+Ember.Observable.reopen({
   set: superReturnThis,
   setProperties: superReturnThis,
   incrementProperty: superReturnThis,
