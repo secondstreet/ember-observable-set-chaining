@@ -1,7 +1,7 @@
 {
   "name": "ember-observable-set-chaining",
-  "version": "0.0.4",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "Restores the 1.X behavior that allowed chaining `set`, `setProperties`, and `[increment|decrement|toggle]Property` calls",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "",
+  "repository": "https://github.com/secondstreet/ember-observable-set-chaining",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Second Street",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",

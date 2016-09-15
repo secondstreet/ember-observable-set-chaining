@@ -1,26 +1,27 @@
-# Ember-observable-set-chaining
+# Ember.Observable `set` chaining
 
-This README outlines the details of collaborating on this Ember addon.
+Restores the 1.X behavior that allowed chaining `set`, `setProperties`, and `[increment|decrement|toggle]Property` calls.
+
+```js
+// Ember 2.X without this addon
+Ember.Logger.log(foo.set('bar', true)); // true
+Ember.Logger.log(foo.setProperties({ baz: false )); // { baz: false }
+```
+
+```js
+// Ember 1.X without this addon
+Ember.Logger.log(foo.set('bar', true)); // foo
+Ember.Logger.log(foo.setProperties({ baz: false )); // foo
+```
+
+```js
+// Ember 2.X with this addon
+Ember.Logger.log(foo.set('bar', true)); // foo
+Ember.Logger.log(foo.setProperties({ baz: false )); // foo
+```
+
+This essentially "undoes" the work of [ember/ember.js#11213](https://github.com/emberjs/ember.js/pull/11213).
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember serve`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+`ember install ember-observable-set-chaining`
