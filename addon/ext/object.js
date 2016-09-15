@@ -5,7 +5,7 @@ const superReturnThis = function() {
   return this;
 };
 
-Ember.Observable.reopen({
+Ember.Object.reopen({
   set: superReturnThis,
   setProperties: superReturnThis,
   incrementProperty: superReturnThis,

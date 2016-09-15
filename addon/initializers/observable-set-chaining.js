@@ -1,4 +1,4 @@
-import ext from '../ext/observable';
+import ext from '../ext/object';
 export function initialize() {
   // nothing else needs to be done here
 }
